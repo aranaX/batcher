@@ -11,7 +11,6 @@ import org.springframework.batch.core.configuration.annotation.JobBuilderFactory
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.item.file.FlatFileItemReader;
-import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.batch.item.file.mapping.DefaultLineMapper;
 import org.springframework.batch.item.file.separator.DefaultRecordSeparatorPolicy;
 import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
@@ -22,7 +21,7 @@ import org.springframework.core.io.ClassPathResource;
 
 @Configuration
 @EnableBatchProcessing
-public class JobConfig {
+class JobConfig {
 	
 	@Autowired
 	JobBuilderFactory jobBuilderFactory;
@@ -38,7 +37,6 @@ public class JobConfig {
 		"FECHA DE PUBLICACIÓN", "MES DE PUBLICACIÓN", "AÑO DE PUBLICACIÓN", "FECHA DE ULTIMA ADJUDICACIÓN",
 		"FECHA DE ADJUDICACIÓN", "MES DE ADJUDICACIÓN", "AÑO DE ADJUDICACIÓN", "CATEGORÍAS", "ESTATUS DEL CONCURSO"
 	};	
-	
 
 	@Bean
 	FlatFileItemReader<ConcursoDTO> reader(){
@@ -84,6 +82,4 @@ public class JobConfig {
 				.end()
 				.build();				
 	}
-	
-
 }

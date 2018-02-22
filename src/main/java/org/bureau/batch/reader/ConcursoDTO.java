@@ -1,7 +1,9 @@
 package org.bureau.batch.reader;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 public class ConcursoDTO {
 	private long no;
@@ -15,14 +17,14 @@ public class ConcursoDTO {
 	private String subModalidad;
 	private String nit;
 	private String nombre;
-	private BigDecimal monto;
-	private LocalDate fechaDePublicacion;
-	private int mesDePublicacion;
-	private int anioDePublicacion;
-	private LocalDate fechaDeUltimaAdjudicacion;
-	private LocalDate fechaDeAdjudicacion;
-	private int mesDeAdjudicacion;
-	private int anioDeAdjudicacion;
+	private BigDecimal monto;	
+	private Date fechaDePublicacion;
+	private String mesDePublicacion;	
+	private String anioDePublicacion;	
+	private Date fechaDeUltimaAdjudicacion;	
+	private Date fechaDeAdjudicacion;
+	private String mesDeAdjudicacion;
+	private String anioDeAdjudicacion;
 	private String categorias;
 	private String estatusDelConcurso;
 	
@@ -31,6 +33,42 @@ public class ConcursoDTO {
 	}
 	
 
+	public String getMesDePublicacion() {
+		return mesDePublicacion;
+	}
+
+
+	public void setMesDePublicacion(String mesDePublicacion) {
+		this.mesDePublicacion = mesDePublicacion;
+	}
+
+
+	public String getAnioDePublicacion() {
+		return anioDePublicacion;
+	}
+
+
+	public void setAnioDePublicacion(String anioDePublicacion) {
+		this.anioDePublicacion = anioDePublicacion;
+	}
+
+
+	public String getMesDeAdjudicacion() {
+		return mesDeAdjudicacion;
+	}
+
+	public void setMesDeAdjudicacion(String mesDeAdjudicacion) {
+		this.mesDeAdjudicacion = mesDeAdjudicacion;
+	}
+
+
+	public String getAnioDeAdjudicacion() {
+		return anioDeAdjudicacion;
+	}
+
+	public void setAnioDeAdjudicacion(String anioDeAdjudicacion) {
+		this.anioDeAdjudicacion = anioDeAdjudicacion;
+	}
 	public void setNo(long no) {
 		this.no = no;
 	}
@@ -67,27 +105,17 @@ public class ConcursoDTO {
 	public void setMonto(BigDecimal monto) {
 		this.monto = monto;
 	}
-	public void setFechaDePublicacion(LocalDate fechaDePublicacion) {
+	public void setFechaDePublicacion(Date fechaDePublicacion) {
 		this.fechaDePublicacion = fechaDePublicacion;
 	}
-	public void setMesDePublicacion(int mesDePublicacion) {
-		this.mesDePublicacion = mesDePublicacion;
-	}
-	public void setAnioDePublicacion(int anioDePublicacion) {
-		this.anioDePublicacion = anioDePublicacion;
-	}
-	public void setFechaDeUltimaAdjudicacion(LocalDate fechaDeUltimaAdjudicacion) {
+	
+	public void setFechaDeUltimaAdjudicacion(Date fechaDeUltimaAdjudicacion) {
 		this.fechaDeUltimaAdjudicacion = fechaDeUltimaAdjudicacion;
 	}
-	public void setFechaDeAdjudicacion(LocalDate fechaDeAdjudicacion) {
+	public void setFechaDeAdjudicacion(Date fechaDeAdjudicacion) {
 		this.fechaDeAdjudicacion = fechaDeAdjudicacion;
 	}
-	public void setMesDeAdjudicacion(int mesDeAdjudicacion) {
-		this.mesDeAdjudicacion = mesDeAdjudicacion;
-	}
-	public void setAnioDeAdjudicacion(int anioDeAdjudicacion) {
-		this.anioDeAdjudicacion = anioDeAdjudicacion;
-	}
+	
 	public void setCategorias(String categorias) {
 		this.categorias = categorias;
 	}
@@ -131,27 +159,17 @@ public class ConcursoDTO {
 	public BigDecimal getMonto() {
 		return monto;
 	}
-	public LocalDate getFechaDePublicacion() {
+	public Date getFechaDePublicacion() {
 		return fechaDePublicacion;
 	}
-	public int getMesDePublicacion() {
-		return mesDePublicacion;
-	}
-	public int getAnioDePublicacion() {
-		return anioDePublicacion;
-	}
-	public LocalDate getFechaDeUltimaAdjudicacion() {
+	
+	public Date getFechaDeUltimaAdjudicacion() {
 		return fechaDeUltimaAdjudicacion;
 	}
-	public LocalDate getFechaDeAdjudicacion() {
+	public Date getFechaDeAdjudicacion() {
 		return fechaDeAdjudicacion;
 	}
-	public int getMesDeAdjudicacion() {
-		return mesDeAdjudicacion;
-	}
-	public int getAnioDeAdjudicacion() {
-		return anioDeAdjudicacion;
-	}
+	
 	public String getCategorias() {
 		return categorias;
 	}

@@ -2,7 +2,7 @@ package org.bureau.batch.reader;
 
 import org.springframework.batch.item.ItemProcessor;
 
-public class ConcursoProcessor implements ItemProcessor<ConcursoDTO, String> {
+class ConcursoProcessor implements ItemProcessor<ConcursoDTO, String> {
 
 	@Override
 	public String process(ConcursoDTO concursoDTO) {
