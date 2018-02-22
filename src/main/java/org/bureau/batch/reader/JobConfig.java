@@ -67,7 +67,7 @@ class JobConfig {
 	@Bean
 	Step step1() {
 		return stepBuilderFactory.get("step1")
-				.<ConcursoDTO, String> chunk(10)
+				.<ConcursoDTO, Persona> chunk(10)
 				.reader(reader())
 				.processor(concursoProcessor())				
 				.writer(concursoWriter())

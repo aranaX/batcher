@@ -2,15 +2,13 @@ package org.bureau.batch.reader;
 
 import org.springframework.batch.item.ItemProcessor;
 
-class ConcursoProcessor implements ItemProcessor<ConcursoDTO, String> {
+class ConcursoProcessor implements ItemProcessor<ConcursoDTO, Persona> {
 
 	@Override
-	public String process(ConcursoDTO concursoDTO) {
-		String result;
-		
-		result = "la descripcion es : " + concursoDTO.getNo() + " - " + concursoDTO.getTipoDeEntidadPadre() + "\n";
-		
-		return result;
+	public Persona process(ConcursoDTO concursoDTO) {
+		Persona persona = new Persona(concursoDTO.getNit(), concursoDTO.getNombre());
+				
+		return persona;
 	}
 
 }
